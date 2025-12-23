@@ -4,11 +4,12 @@
 
 ### Prerequisites packages
 
-List of packages that are needed/HIGHLY recommended
+List of packages that are needed in order for this config to work
 * ripgrep
-* gcc 
+* gcc/g++ 
 * npm
 * xclip
+* tree-sitter 
 
 ### Command for copying this repo to you config 
 ```bash
