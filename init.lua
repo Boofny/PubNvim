@@ -103,6 +103,7 @@ require("lazy").setup({
 
     { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
     { 'mbbill/undotree' },
+    -- plugins bellow are in files in the dir lua/plugins/
     {import = "plugins.lspconfig"},
     {import = "plugins.catColor"},
     {import = "plugins.lualine"}, --5
@@ -118,6 +119,7 @@ require("lazy").setup({
   -- automatically check for plugin updates
   checker = { enabled = false},
 })
+-- mini is a pack of plugins like snacks nvim 
 require('mini.surround').setup()  -- better surround handling
 require('mini.pairs').setup()     -- auto-pairing brackets
 require('mini.diff').setup()     -- Git diff for the num line on the left
@@ -128,8 +130,8 @@ vim.api.nvim_set_keymap("n", "<C-d>", "<C-d>zz", { noremap = true, silent = true
 vim.api.nvim_set_keymap("n", "<C-u>", "<C-u>zz", { noremap = true, silent = true })
 
 -- Leader key Remapping for other plugins
-vim.api.nvim_set_keymap("n", "<leader>l", "$", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<leader>h", "^", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<leader>l", "$", { noremap = true, silent = true }) -- end of line without going into insert mode 
+vim.api.nvim_set_keymap("n", "<leader>h", "^", { noremap = true, silent = true }) -- begining of line without going into insert mode 
 vim.keymap.set("n", "<leader>w", ":w<CR>") -- save
 vim.keymap.set("n", "<leader>t", ":vertical belowright terminal<CR>") -- for quik terminal
 vim.keymap.set("n", "<leader>f", ":lua Snacks.picker.files()<CR>") -- file picker
@@ -148,7 +150,7 @@ vim.keymap.set( -- golang key map for errors
 -- not show the tabline when starting
 vim.o.showtabline = 1
 
--- use custom tabline function
+-- use custom tabline function so no need for a plugin like bufferLIne
 vim.o.tabline = "%!v:lua.MyTabLine()"
 
 function _G.MyTabLine()

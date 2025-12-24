@@ -1,18 +1,9 @@
--- return{
---   "folke/snacks.nvim",
---   lazy = false,
---   opts = {
---     bigfile = { enabled = true },
---     indent = { enabled = true },
---     quickfile= { enabled = true },
---     picker = {enabled = true, peview = nil}
---   }
--- }
-
+-- snacks neovim is a uniqe plugin because its actually multiple plugins in one
+-- this greatly improved perfomence of neovim 
 return{
   "folke/snacks.nvim",
   opts = {
-    bigfile = { enabled = true },
+    bigfile = { enabled = true }, -- from bigfile to dashboard are individual plugins
     indent = { enabled = true },
     quickfile = { enabled = true },
     picker = {enabled = true, peview = nil},
@@ -56,14 +47,7 @@ return{
  ░░░░░    ░░░░░ ░░░░░░░░░░    ░░░░░░░         ░░░      ░░░░░ ░░░░░     ░░░░░  
     ]],
 
-        -- stylua: ignore
-        ---@type snacks.dashboard.Item[]
         keys = {
-          -- the origin options if needed
-          -- { icon = " ", key = "f", desc = "Find File", action = ":lua Snacks.dashboard.pick('files')" },
-          -- { icon = " ", key = "n", desc = "New File", action = ":ene | startinsert" },
-          -- { icon = "󰒲 ", key = "l", desc = "Lazy", action = ":Lazy" },
-          -- { icon = " ", key = "q", desc = "Quit", action = ":qa" },
          { icon = " ", key = "f", desc = "Find File", action = ":lua Snacks.dashboard.pick('files')" },
          { icon = " ", key = "n", desc = "New File", action = ":ene | startinsert" },
          { icon = " ", key = "g", desc = "Find Text", action = ":lua Snacks.dashboard.pick('live_grep')" },

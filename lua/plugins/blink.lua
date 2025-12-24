@@ -1,4 +1,9 @@
--- this is auto completion 
+-- this is auto completion with default keybindings 
+-- there is more presets like vs code bindings
+-- but the main three movemts are 
+-- CtrL + n to move down
+-- CtrL + p to move up
+-- CtrL + y to confirm auto complete
 return{
   'saghen/blink.cmp',
   event = {"BufReadPre", "BufNewFile"}, --see linux nvim events 

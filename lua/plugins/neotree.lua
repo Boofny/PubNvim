@@ -1,3 +1,4 @@
+-- This is a lot of confusing config but all that really matters is the side you want this file tree displayed
 return{
       "nvim-neo-tree/neo-tree.nvim",
       branch = "v3.x",
@@ -28,7 +29,7 @@ config = function()
 
 require("neo-tree").setup({
     window = {
-        position = "right",
+        position = "right", -- change to left or rigt
     },
   event_handlers = {
     {
@@ -41,6 +42,7 @@ require("neo-tree").setup({
   },
 })
 
+-- This create bellow is for when neovim is used in the terminal as such (nvim .)
 vim.api.nvim_create_autocmd("VimEnter", {
   callback = function()
     if vim.fn.argc() == 1 then

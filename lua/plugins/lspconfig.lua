@@ -1,3 +1,5 @@
+-- this is the super power of this config allowing the lsp server to connect to the auto complete using Mason and other plugins
+-- The :Mason command will be the main way to install and manage plugins 
 return {
   "neovim/nvim-lspconfig",
   event = { "BufReadPre", "BufNewFile" }, -- or "BufEnter" if you prefer
